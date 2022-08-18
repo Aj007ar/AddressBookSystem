@@ -8,33 +8,36 @@ namespace AddressBookSystem
 {
     internal class UC1_CreateContact
     {       
-           Dictionary<string, string> contact = new Dictionary<string, string>();
+           Dictionary<string, List<string>> contact = new Dictionary<string, List<string>>();
 
             public void Add_Contact()
             {
                 Console.WriteLine("Enter First Name:");
-                contact.Add("First_Name",Console.ReadLine());
+                var first_name = Console.ReadLine();
 
                 Console.WriteLine("Enter Last Name:");
-                contact.Add("Last_Name", Console.ReadLine());
+                var last_name = Console.ReadLine();
 
                 Console.WriteLine("Enter Address:");
-                contact.Add("Address", Console.ReadLine());
+                var address = Console.ReadLine();
 
                 Console.WriteLine("Enter City:");
-                contact.Add("City_Name", Console.ReadLine());
+                var city = Console.ReadLine();
 
                 Console.WriteLine("Enter State:");
-                contact.Add("State_Name", Console.ReadLine());
+                var state = Console.ReadLine();
 
                 Console.WriteLine("Enter Zip code:");
-                contact.Add("Zip_Code", Console.ReadLine());
+                var zip = Console.ReadLine();
 
                 Console.WriteLine("Enter phone Number:");
-                contact.Add("Phone_Number", Console.ReadLine());
+                var phoneNumber = Console.ReadLine();
 
                 Console.WriteLine("Enter Email:");
-                contact.Add("Email", Console.ReadLine());
-            }       
+                var email = Console.ReadLine();
+
+                var details = new List<string> { address, city, state, zip, phoneNumber, email };
+               
+            }  
     }
 }
