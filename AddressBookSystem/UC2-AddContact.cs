@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
-    internal class Select:UC3_EditContact
+    internal class Select:UC4_DeleteContact
     {
         public void Check()
         {
             Console.WriteLine("1. Add contacts in address book:");
             Console.WriteLine("2.Edit Contact Details");
-            Console.WriteLine("3.Exit");
+            Console.WriteLine("3.Delete Contacts");
+            Console.WriteLine("4.Exit");
             Console.WriteLine("Choose option for execute a program");
             var option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -29,6 +30,11 @@ namespace AddressBookSystem
                     Check();
                     break;
                 case 3:
+                    Delete();
+                    Console.WriteLine("Press enter to Continue");
+                    Console.ReadLine();
+                    break;
+                case 4:
                     break;
             }
         }
