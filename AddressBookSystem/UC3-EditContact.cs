@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
-    public class UC3_EditContact:UC1_CreateContact
+    public class UC3_EditContact:UC2_AddContact
     {
         public void edit()
         {
             Console.WriteLine("\nEnter Full name for edit contacts : ");
             var dict = Console.ReadLine().ToUpper();
+            if (!dict.Contains(dict))
+                Console.WriteLine("User Not Found"); edit();
+
             Console.WriteLine("1.Edit address");
             Console.WriteLine("2.Edit City");
             Console.WriteLine("3.Edit State");

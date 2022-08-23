@@ -12,7 +12,10 @@ namespace AddressBookSystem
         {
             Console.WriteLine("Enter Name For delete contact");
             var dict = Console.ReadLine().ToUpper();
-            contact.Remove(dict);
+            if (dict.Contains(dict))
+                contact.Remove(dict);
+            else
+                Console.WriteLine("Person not found"); Delete();
         }
     }
 }
